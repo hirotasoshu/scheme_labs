@@ -1,0 +1,16 @@
+#lang scheme
+(define (if_divide divided divider)
+  (let* ((a (/ divided divider)) (b (/ divided a)))
+    (if (= (remainder divided divider) 0)
+        (+ a b) 0 ))) 
+(define (perfect_number? number)
+  (define (iter sum n)
+    (if (> number 1)
+        (if (= n (ceiling (sqrt number)))
+            (= sum number) (iter (+ sum (if_divide number n)) (+ n 1))) #f))
+  (iter 1 2))
+(perfect_number? 1)
+(perfect_number? 6)
+(perfect_number? 7)
+(perfect_number? 8128)
+    
