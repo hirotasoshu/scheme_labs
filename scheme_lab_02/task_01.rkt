@@ -4,3 +4,4 @@
 (max_digit 156)
 (max_digit 3870)
 (max_digit 913)
+(max_digit 3)

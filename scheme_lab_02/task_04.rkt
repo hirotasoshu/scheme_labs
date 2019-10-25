@@ -13,3 +13,4 @@
 (nearest_fib 6)
 (nearest_fib 8)
 (nearest_fib 12)
+(nearest_fib 4)

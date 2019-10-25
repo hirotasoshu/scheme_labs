@@ -9,4 +9,4 @@
   (iter (remainder num 10) num 0))
 (eq_digits? 222)
 (eq_digits? 322)
- 
+ (eq_digits? 2)

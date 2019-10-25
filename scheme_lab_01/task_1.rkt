@@ -25,3 +25,4 @@
 (get_dist 2 -5 -6)
 (get_dist 1 2 -3)
 (get_dist 1 -2 -3)
+(get_dist 1 -2 -2)

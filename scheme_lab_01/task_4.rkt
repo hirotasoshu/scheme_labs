@@ -12,3 +12,4 @@
 (move_count 3 3 4 4)
 (move_count 3 3 4 5)
 (move_count 5 4 6 7)
+(move_count 1 8 8 1)
