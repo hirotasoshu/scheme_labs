@@ -1,0 +1,10 @@
+#lang scheme
+(define (product lst n)
+  (let ((a (expt 10 (- n 1))))
+    (define (iter lst prod have_needed_numbers)
+      (if (empty? lst)
+          (if (eq? have_needed_numbers #t) prod 0)
+          (if (< (quotient (car lst) a) 10)
+              (iter (cdr lst) (* prod (car lst)) #t)
+              (iter (cdr lst) prod have_needed_numbers))))
+    (iter lst 1 #f)))
