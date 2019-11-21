@@ -11,11 +11,10 @@
     (* (foldl (lambda (record sum)
                 ((eval (cadr record)) sum (caddr record))) sum day-record) percent_mult))
   (foldl (lambda (day sum)
-         (if (member day days-in-protocol)
-             (get-sum-of-day sum day)
-             (* sum percent_mult))) sum days))
+           (if (member day days-in-protocol)
+               (get-sum-of-day sum day)
+               (* sum percent_mult))) sum days))
 
 (define (display-account-status sum percent protocol)
   (display (~r (account-status sum percent protocol) #:precision 5)))
              
-          
