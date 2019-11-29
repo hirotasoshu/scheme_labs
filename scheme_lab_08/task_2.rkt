@@ -1,6 +1,8 @@
 #lang scheme
-(define (positive-matrix? matrix)
+(define (non-negative? num)
+  (>= num 0))
+(define (non-negative-matrix? matrix)
   (andmap (lambda (row)
-            (andmap positive? row)) matrix))
+            (andmap non-negative? row)) matrix))
   
   
