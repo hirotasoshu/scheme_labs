@@ -16,4 +16,16 @@
             (iter-str (cdr str-lst) (string-append substr (string (car str-lst))) substrs))))
   (iter-str str-lst "" '()))
 (define (equal-words? str)
-  (check-duplicates (get-substrs str " ")))
+  (define words (get-substrs str " "))
+  (define (iter-words words res)
+    (if (empty? words)
+        res
+        (if res
+            res
+                (if (ormap (lambda [word]
+                             (equal? word (car words))) (cdr words))
+                    (car words)
+                    (iter-words (cdr words) #f)))))
+  (iter-words words #f))
+    
+  
